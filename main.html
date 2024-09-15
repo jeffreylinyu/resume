@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>林彧的履歷</title>
+    <!-- 引入 Materialize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <!-- 引入 Google 字體 -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- 引入 jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- 自訂樣式 -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1abc9c 30%, #2980b9 100%);
+            color: #34495e;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        body.fade-in {
+            opacity: 1;
+        }
+
+        .container {
+            background-color: #ffffff;
+            margin: 90px auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h4,
+        h5 {
+            color: #2c3e50;
+        }
+
+        .profile-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 20px;
+        }
+
+        .profile-image {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            margin-right: 20px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.1);
+        }
+
+        .profile-info h4 {
+            font-size: 22px;
+            font-weight: bold;
+            margin: 0 0 18px 0;
+        }
+
+        .profile-info p {
+            color: #7f8c8d;
+            font-size: 16px;
+        }
+
+        .skills,
+        .experience,
+        .education,
+        .job-conditions,
+        .self-intro {
+            margin-bottom: 40px;
+        }
+
+        h5 {
+            position: relative;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        h5::after {
+            content: "";
+            width: 100px;
+            height: 2px;
+            background-color: #1abc9c;
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+        }
+
+        .skills {
+            display: flex;
+        }
+
+        @media (max-width: 786px) {
+            .container {
+                margin: 50px auto;
+            }
+
+            .profile-info h4 {
+                font-size: 16px;
+                font-weight: bold;
+                margin: 0 0 18px 0;
+            }
+
+            .profile-info p {
+                color: #7f8c8d;
+                font-size: 12px;
+            }
+
+            .profile-section {
+                flex-direction: column;
+            }
+
+            .skills {
+                flex-direction: column;
+            }
+        }
+
+        .skills>div {
+            flex: 1;
+            padding: 0 10px;
+        }
+
+        .skills>div:nth-last-child(-n+2) {
+            margin-top: 46px;
+        }
+
+        .skills-list li {
+            padding: 10px 0;
+            background-color: #ecf0f1;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            padding-left: 15px;
+            transition: all 0.1s ease;
+        }
+
+        .skills-list li:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .experience-item {
+            background-color: #ecf0f1;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .experience-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .self-intro .title {
+            margin-bottom: 10px;
+        }
+
+        .self-intro .content {
+            margin-bottom: 20px;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 個人資料部分 -->
+    <div class="container">
+        <div class="profile-section">
+            <img src="./files/avatar.webp" alt="林彧的照片" class="profile-image">
+            <div class="profile-info">
+                <h4>林彧</h4>
+                <h4>艾帝浦杰股份有限公司 | 前端工程師</h4>
+                <h4 style="margin-bottom: 30px;">台北城市科技大學 | 資訊工程系</h4>
+                <p>．擁有 3.5 年前端開發經驗及 1 年後端開發經驗</p>
+                <p>．擅長 Vue2、Vue3 和 React，專注於 UI 和 UX 的設計與實現發</p>
+                <p>．具備規劃和設計 API 的經驗，致力於提升產品使用體驗</p>
+                <p>．並能夠獨立完成 UI/UX 設計及收集使用者回饋</p>
+                <p>．擅長運用 AI 技術進行協作，提升工作效率與效果</p>
+            </div>
+        </div>
+
+        <!-- 技能部分 -->
+        <div class="skills">
+            <div>
+                <h5>專長</h5>
+                <h6>前端</h6>
+                <ul class="skills-list">
+                    <li>Vue2、Vue3</li>
+                    <li>react</li>
+                    <li>TypeScript</li>
+                    <li>jQuery</li>
+                    <li>Git</li>
+                </ul>
+            </div>
+            <div>
+                <h6>後端</h6>
+                <ul class="skills-list">
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>JavaWeb</li>
+                    <li>Spring、SpringMVC</li>
+                    <li>MyBatis</li>
+                    <li>MySQL</li>
+                </ul>
+            </div>
+            <div>
+                <h6>開發工具</h6>
+                <ul class="skills-list">
+                    <li>IntelliJ IDEA</li>
+                    <li>Eclipse</li>
+                    <li>Visual Studio Code</li>
+                    <li>GitHub</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- 工作經歷部分 -->
+        <div class="experience">
+            <h5>工作經歷</h5>
+            <div class="experience-item">
+                <p><strong>艾帝浦杰股份有限公司 | 長榮海運全端工程師</strong> (2022/10 - 至今)</p>
+                <ul>
+                    <li><strong>開發與維護前端應用：</strong>使用 jQuery 和 長榮內部前端框架，構建高效、可擴展的 UI 組件，確保跨瀏覽器的兼容性和性能優化。</li>
+                    <li><strong>前端架構設計：</strong>參與項目的前端架構設計，運用模組化和組件化的開發方式，提升開發效率並確保代碼的可維護性。</li>
+                    <li><strong>API 整合：</strong>與後端工程師協作，對接並整合 API，確保前後端數據的有效交互與安全性，並進行異常處理和性能優化。</li>
+                    <li><strong>持續改進與優化：</strong>根據用戶反饋和分析數據，不斷迭代產品功能，優化用戶界面和交互流程，提升整體使用者體驗。</li>
+                    <li><strong>跨部門協作：</strong>與設計師、產品經理密切合作，參與產品需求討論，提供技術實現方案，確保產品的可行性和易用性。</li>
+                </ul>
+            </div>
+
+
+
+
+
+
+
+            <div class="experience-item">
+                <p><strong>勤禾科技服務股份有限公司 | 前端工程師</strong> (2021/4 - 2022/8)</p>
+                <ul>
+                    <li><strong>使用 Vue 開發與維護前端網站：</strong>負責前端網站的構建，包括設計和程式開發，確保網站具備高效性能與良好用戶體驗。</li>
+                    <li><strong>規劃前端網頁設計：</strong>參與整體前端設計規劃，運用最新的設計趨勢和技術，為產品打造吸引人且易用的介面。</li>
+                    <li><strong>軟體測試與改進：</strong>執行軟體測試，及時識別並解決問題，持續優化功能，確保產品的穩定性與可靠性。</li>
+                    <li><strong>新技術與工具研發：</strong>積極參與新技術和新工具的研究與開發，為團隊引入前沿技術以提升工作效率。</li>
+                    <li><strong>團隊協作開發：</strong>與團隊成員共同構思並設計新功能及 API，確保前後端協作順暢，提升產品品質。</li>
+                    <li><strong>成就：</strong>成功翻新舊系統：入職三個月後主導舊後台系統的全面翻新，包括功能設計與 UI/UX 優化，成功上線並獲得客戶的高度滿意。</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 學歷部分 -->
+        <div class="education">
+            <h5>學歷</h5>
+            <p>台北城市科技大學 | 資訊工程系</p>
+        </div>
+
+        <!-- 求職條件部分 -->
+        <div class="job-conditions">
+            <h5>求職條件</h5>
+            <p><strong>希望性質：</strong> 兼職工作</p>
+            <p><strong>上班地點：</strong> 新北市、桃園市</p>
+            <p><strong>期望職位：</strong> 前端工程師、全端工程師</p>
+        </div>
+
+        <!-- 聯繫資訊部分 -->
+        <div class="contact-info">
+            <h5>聯繫資訊</h5>
+            <p>年齡: 27</p>
+            <p>生日: 1997/8</p>
+            <p>電話: 0931-991-323</p>
+            <p>Email: showeryu18@gmail.com</p>
+            <p>地址: 桃園市中壢區</p>
+        </div>
+
+        <!-- 自傳部分 -->
+        <div class="self-intro">
+            <h5>自傳</h5>
+            <ul>
+                <li class="title"><strong>【成長背景】</strong> </li>
+                <li class="content">&emsp;出生於 1997
+                    年，新北人。母親從事珠寶業，父親為韌體工程師。從小父親就教育我要對任何事物保持好奇心，他經常帶著年幼的我拆解各種電子設備，這些經歷讓我對電路和科技有了最初的認識，激發了我對工程領域的興趣。</li>
+                <li class="title"><strong>【加強技術，自我學習】</strong></li>
+                <li class="content">&emsp;在大學期間，我初次接觸到程式語言，感受到與過去所學的聯繫，這讓我感到十分興奮。於是，我在課餘時間自學了 C
+                    語言，並取得了一些小成果。這段時間，我幫助父親的公司撰寫了一個簡單的測試工具，獲得了公司的讚賞，這也確立了我想成為工程師的決心。
+                    為了學習更貼近企業需求的技術，我進一步學習了 Java 語言，並深入了解物件導向（OOP）、Java Web 相關技術，以及 Spring、MyBatis
+                    等框架，這些學習讓我對程式語言有了更深的理解。雖然課堂學習已經提供了良好的基礎，但自學仍是我技術成長的主要動力。我熱愛在實作中學習，解決問題帶來的成就感讓我樂在其中，常常忘記時間的流逝。這種熱衷於自主學習的精神，成為了我最重要的特質之一。
+                </li>
+                <li class="title"><strong>【職涯目標】</strong> </li>
+                <li class="content">&emsp;我的職涯目標是成為一位全端工程師，能夠在前端與後端領域都具備深入的專業知識。希望在前端部分繼續強化對 Vue、React 等框架的掌握，同時在後端深入學習如
+                    Java、Spring
+                    等技術，實現更流暢的前後端整合。
+                    我希望未來能夠參與更多完整的專案開發，從前端界面設計到後端系統架構都全程參與，並且能夠自主完成整個開發流程。我也期望在團隊中發揮關鍵作用，協助打造更高效的開發流程，提升整體產品的性能和品質，並持續探索新技術，為產品創造更大的價值。
+                </li>
+                <li class="title"><strong>【未來展望，AI 應用】</strong> </li>
+                <li class="content">&emsp;未來，我希望將 AI 技術與全端開發相結合，探索其在優化用戶體驗和提升開發效率方面的應用。AI
+                    的快速發展帶來了許多機遇，例如通過機器學習實現更智能的用戶介面，或利用自動化工具簡化開發流程。期待在這個領域不斷學習，並將其應用於實際專案中，為產品創造更大的價值。同時，我希望與團隊一起探索 AI
+                    在產品中的潛力，打造更創新和具競爭力的產品。</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 引入 Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // 當頁面準備好後，將 body 設置為可見
+            $('body').addClass('fade-in');
+        });
+    </script>
+</body>
+
+</html>
